@@ -1,0 +1,149 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Team Id: PNT2022TMID25478\n"
+      ],
+      "metadata": {
+        "id": "fi5v0gjYEkk0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Project: Real-Time Communication system powered by AI for specially abled"
+      ],
+      "metadata": {
+        "id": "32dw23fwFj7V"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Image processing**"
+      ],
+      "metadata": {
+        "id": "QXFlhlTgEn-a"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "*Import ImageDataGenerator Library And Configure It*"
+      ],
+      "metadata": {
+        "id": "TDTIZVOeFOul"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "I_mHw62oEUqr"
+      },
+      "outputs": [],
+      "source": [
+        "#import imagedatagenerator\n",
+        "from keras.preprocessing.image import ImageDataGenerator"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#training datagen\n",
+        "train_datagen=ImageDataGenerator(rescale=1./255,shear_range=0.2,zoom_range=0.2,horizontal_flip=True)"
+      ],
+      "metadata": {
+        "id": "ya-UCz3tF1U1"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#testing datagen\n",
+        "test_datagen=ImageDataGenerator(rescale=1./255)"
+      ],
+      "metadata": {
+        "id": "UISsIzIDh_iv"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IMPORTING tensorflow"
+      ],
+      "metadata": {
+        "id": "c0mnRWJhikOJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import tensorflow as tf\n",
+        "import os"
+      ],
+      "metadata": {
+        "id": "iKW85AEOiO2Q"
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IMPORTING SEQUENTIAL, DENSE, FLATTEN LAYER"
+      ],
+      "metadata": {
+        "id": "fWc7iOwskUou"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from tensorflow.keras.models import Sequential\n",
+        "from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPooling2D\n",
+        "from tensorflow.keras.preprocessing.image import ImageDataGenerator"
+      ],
+      "metadata": {
+        "id": "p2aNVlq5ijV5"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt #to view graph in colab itself\n",
+        "import IPython.display as display\n",
+        "from PIL import Image\n",
+        "import pathlib"
+      ],
+      "metadata": {
+        "id": "3-tqQA1JkmBo"
+      },
+      "execution_count": 6,
+      "outputs": []
+    }
+  ]
+}
